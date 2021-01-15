@@ -17,15 +17,15 @@ class BiteFish extends Fish{
     for (let prey of radar){
       // Not yourself and doesn't eat starter or seeds
       if (prey !== this){
-        if(prey instanceof Starter){
-          return false;
-        }else if (prey instanceof Seed){
-          return false;
-        }else {
+        if(prey instanceof Fish){
           prey.kill();
         }
       }
 
     }
+  }
+
+  onClick(){
+    // somthing later
   }
 }
