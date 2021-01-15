@@ -19,5 +19,13 @@ class Starter extends Denizen {
       velocity: new Vector(xVel, yVel),
       type: this.tank.getRandomSpecies(),
     });
+
+    let oriHeight = this.height;
+    setTimeout(() => {
+      this.height += this.height * 1.2;
+    }, 50);
+    setTimeout(() => {
+      this.height = oriHeight;
+    }, 100);
   }
 }
